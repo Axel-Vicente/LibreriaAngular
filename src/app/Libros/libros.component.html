@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+
+        <th>Titulo</th>
+        <th>Fecha de publicion</th>
+        <th>Foto</th>
+
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let libro of libros">
+            <tr>
+
+                <td>{{libro.titulo}}</td>
+                <td>{{libro.fec_public}}</td>
+                <td><img src={{libro.foto}} height="100px"></td>
+            </tr>
+        </ng-container>
+        <tr *ngIf="!libros || libros.length==0">
+            <td colspan="4"> No hay libros </td>
+        </tr>
+    </tbody>
+</table>

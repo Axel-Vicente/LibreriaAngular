@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+
+        <th>Nombre</th>
+        <th>Direccion</th>
+        <th>Estanterias Disponibles</th>
+
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let libreria of librerias">
+            <tr>
+
+                <td>{{libreria.nombreLibreria}}</td>
+                <td>{{libreria.direccion}}</td>
+                <td>{{libreria.numEstanterias}}</td>
+            </tr>
+        </ng-container>
+        <tr *ngIf="!librerias || librerias.length==0">
+            <td colspan="4"> No hay librerias </td>
+        </tr>
+    </tbody>
+</table>

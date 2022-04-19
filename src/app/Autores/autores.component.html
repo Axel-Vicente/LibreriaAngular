@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+
+        <th>Nombre</th>
+        <th>Especialidad</th>
+        <th>Foto</th>
+
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let autor of autores">
+            <tr>
+
+                <td>{{autor.nombreAutor}}</td>
+                <td>{{autor.especialidad}}</td>
+                <td><img src={{autor.foto}} height="100px"></td>
+            </tr>
+        </ng-container>
+        <tr *ngIf="!autores || autores.length==0">
+            <td colspan="4"> No hay autores </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,7 @@
+<br><br>
+<span>Autores: {{autores}}</span>
+<br><br>
+<select [(ngModel)]="libreriaSeleccionada" (change)="onChangeLibreria()">
+  <option *ngFor="let libreria of librerias" value={{libreria.id}}>{{libreria.nombreLibreria}}</option>
+</select>
+<br>
